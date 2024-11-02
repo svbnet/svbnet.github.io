@@ -4,4 +4,4 @@
 
 layout: home
 ---
-Welcome to my crazy website!
+## My Posts

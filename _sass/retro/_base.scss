@@ -75,6 +75,12 @@ hr {
     height: 27px;
     background-image: url('/assets/images/theme/colorsqu.gif');
   }
+
+  &.chain {
+    @include image-hr();
+    height: 17px;
+    background-image: url('/assets/images/theme/chain.gif');
+  }
 }
 
 /**
@@ -303,4 +309,23 @@ table {
     -webkit-overflow-scrolling: touch;
             -ms-overflow-style: -ms-autohiding-scrollbar;
   }
+}
+
+.bevelled {
+  color: #333;
+  background: #ccc;
+  $border-size: 3px;
+  border: $border-size solid transparent;
+  $top-left-color: #eee;
+  $bottom-right-color: #444;
+  border-color: $top-left-color $bottom-right-color $bottom-right-color $top-left-color;
+
+  &:active {
+    border-color: $bottom-right-color $top-left-color $top-left-color $bottom-right-color;
+    
+  }
+}
+
+a.bevelled {
+  color: #333;
 }
