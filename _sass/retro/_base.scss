@@ -30,11 +30,18 @@ body {
           font-feature-settings: "kern" 1;
   font-kerning: normal;
   display: grid;
+  overflow-wrap: break-word;
+
   grid-template-columns: 250px 1fr;
   gap: 10px;
   grid-template-rows: 1fr auto;
   min-height: 100vh;
-  overflow-wrap: break-word;
+
+  @include media-query($on-laptop) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 10px 0;
+  }
 }
 
 
@@ -135,7 +142,7 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: $base-font-weight;
+  font-weight: bold;
 }
 
 
@@ -230,7 +237,6 @@ pre {
  * Wrapper
  */
 .wrapper {
-  max-width: calc(#{$content-width} - (#{$spacing-unit}));
   padding-right: $spacing-unit * .5;
   padding-left: $spacing-unit * .5;
   background-color: $dm-background-color;
